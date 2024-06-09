@@ -1,0 +1,6 @@
+Configure the connection:
+Host: app-database.postgres.database.azure.com
+Port: Leave the port number as is (default is 5432) if you don't want to connect through pgBouncer. If you are using PgBouncer for connection pooling, change the port number to 6432.
+Database: Enter the name of the database you want to connect to. If you're not sure, use the default "postgres" database.
+Username: Enter garcia
+Password: Enter the admin password. Leave "Save password locally" box checked if you don't want to enter the password every time you connect. desa123$
