@@ -1,0 +1,22 @@
+<p class="centered-text">VINO COSTERO</p>
+
+
+<button mat-button (click)="showGestionCliente = true; showGestionPrestamo = false; showSolicitudPrestamo = false;">Registro de Parcelas</button>
+
+<button mat-button (click)="showGestionPrestamo = true; showGestionCliente = false; showSolicitudPrestamo = false;">Lotes Producidos</button>
+
+<button mat-button (click)="showSolicitudPrestamo = true; showGestionCliente = false; showGestionPrestamo = false;">Órdenes de Compras</button>
+
+<mat-card>
+  <mat-card-content *ngIf="showGestionCliente">
+    <app-gestion-cliente [clientes]="clientes"></app-gestion-cliente>
+  </mat-card-content>
+
+  <mat-card-content *ngIf="showGestionPrestamo">
+    <app-gestion-prestamo [clientes]="clientes"></app-gestion-prestamo>
+  </mat-card-content>
+
+  <mat-card-content *ngIf="showSolicitudPrestamo">
+    <app-solicitud-prestamo [solicitudes]="solicitudes" [clientes]="clientes"></app-solicitud-prestamo>
+  </mat-card-content>
+</mat-card>
